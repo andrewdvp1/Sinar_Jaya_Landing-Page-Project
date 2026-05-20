@@ -50,7 +50,9 @@
 
       <div class="text-center mt-10">
         <a :href="waLink" target="_blank" class="inline-flex items-center justify-center bg-[#1A1A1A] hover:bg-black text-[#D4AF37] font-medium uppercase tracking-[0.15em] text-[10px] px-8 py-3 transition rounded-sm shadow-sm gap-2">
-          LIHAT KOLEKSI LENGKAP DI WHATSAPP 💬
+          <span>LIHAT KOLEKSI LENGKAP DI WHATSAPP</span>
+          
+          <Icon icon="ic:baseline-whatsapp" class="text-sm" />
         </a>
       </div>
 
@@ -60,6 +62,8 @@
 
 <script setup>
 import { computed } from 'vue'
+import { Icon } from '@iconify/vue' 
+
 const phoneNumber = '628123456789'
 const waLink = computed(() => `https://wa.me/${phoneNumber}?text=Halo%20Sinar%20Jaya%2C%20saya%20tertarik%20melihat%20katalog%20lengkapnya.`)
 </script>
